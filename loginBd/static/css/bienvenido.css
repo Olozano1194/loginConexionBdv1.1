@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(rgba(255,255,255,0), rgba(201,214,250,1)); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    
+}
+
+header .contenedor-menu {
+   display: flex;
+   justify-content: end;
+   min-width: 400px;
+  
+}
+
+header .menu {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 2rem 0 0;
+    
+}
+
+header ul {
+    
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+header li, a {
+    color: #36323d;
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    border-bottom: .2rem solid transparent;
+    
+}
+
+header a:hover {
+    border-bottom: 2px solid #181717;
+}
+
+main .bienvenida {
+    width: 90%;
+    max-width: 1000px;
+    
+    
+}
+
+main h1 {
+    margin: 3rem;
+    font-size: 3rem;
+}
+
+main p {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+}
+
+footer .contacto {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 3rem auto 3rem 3rem;
+}
+
+footer .contacto a {
+    border-bottom: .2rem solid transparent;
+    
+}
+
+footer .contacto a:hover {
+    border-bottom: .2rem solid #36323d;
+}
+
+footer .redes-sociales {
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+
+footer .redes-sociales a {
+    font-size: 5rem;
+}
+
+footer .redes-sociales i {
+    text-align: center;
+    margin-bottom: 2rem;
+    
+}
+
+footer .redes-sociales .facebook {
+    color: #00a0dc;
+}
+
+footer .redes-sociales .whatsapp {
+    color: #25D366;
+}
+
+footer .redes-sociales .instagram {
+    color: #3f729b;
+}
+
+footer .redes-sociales .facebook:hover {
+    color: #0235c0;
+}
+
+footer .redes-sociales .whatsapp:hover {
+    color: #03612a;
+}
+
+footer .redes-sociales .instagram:hover {
+    color: #3f409b;
+}
+
+footer .copy-right {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+
+    
+}
+
+footer .copy-right p {
+    font-size: 2.5rem;
+}
+

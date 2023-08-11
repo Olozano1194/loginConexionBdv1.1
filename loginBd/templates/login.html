@@ -1,0 +1,77 @@
+{% load static %} <!--esto es para que los archivos del css puedan iniciarsen-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--el fonticon-->
+    <link rel="short icon" href="{% static 'img/login.jpg' %}">
+    
+
+    <link type='text/css' rel="stylesheet" href="{% static 'css/logIn.css' %}">
+
+     <!--Font Awesome-->
+     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet'>
+
+    <title>Login</title>
+</head>
+<body>
+    
+    <h1 class="title">Login</h1>
+    
+    <main>
+        
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            {% if error  %}
+
+            <div class="errorViews">
+                {{error}}
+            </div>
+            
+            {% endif %}
+
+            
+
+            <div class="container-request">
+                <label for="user" class="label">User:</label>
+                <input type="text" class="users" id="user" name="user" placeholder="Email or User">
+                <label for="password" class="label">Password:</label>
+                <input type="password" id="password" class="pass" name="password" placeholder="Password">
+            </div>
+
+            <div class="container-btn">
+                <button class="Login"><i class="fa-solid fa-right-to-bracket"></i> logIn</button>
+                <button class="checkin" id="check"><a href='{% url 'checkin' %}'><i class="fa-solid fa-address-card"></i> Check In</a></button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class='container'>
+            <div class='copy'>
+                <p>&copy Creado por Oscar Lozano - 2023</p>
+            </div>
+            
+            
+            <div class='redes_sociales'>
+                <a href="https://www.linkedin.com/in/OlozanoBocanegra">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Olozano1194">
+                    
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+        
+       
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+

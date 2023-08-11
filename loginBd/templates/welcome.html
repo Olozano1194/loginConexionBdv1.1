@@ -1,0 +1,80 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--el fonticon-->
+    <link rel="short icon" href="{% static 'img/home.png' %}">
+    
+    <link type='text/css' rel="stylesheet" href="{% static 'css/bienvenido.css' %}">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet'>
+
+    <title>Bienvenido</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor-menu">
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="">Mi perfil</a>
+                    </li>
+                    <li>
+                        <a href="">Configuración</a>
+                    </li>
+                    <li>
+                        <a href="">Ayuda</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a href='/logout'>Cerrar Sesión</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="/checkin">Registrarse</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+       
+    </header>
+
+    <main>
+        {% comment %} {% for u in user  %} {% endcomment %}
+        <section class="bienvenida">
+            <div class="contenedor-bienvenida">
+                <h1>Bienvenido/a, {{ request.session.user_name }}</a></h1>
+                <p>¡Gracias por registrarte en nuestro sitio! Esperamos que disfrutes de todas nuestras funcionalidades.</p>
+
+            </div>
+        {% comment %} {% endfor %} {% endcomment %}
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="contacto">
+            <p>¿Necesitas ayuda? Contáctanos en <a href="#">contacto@ejemplo.com</a></p>
+        </div>
+
+        <div class="redes-sociales">
+            <a class="facebook" href="https://es-la.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a class="whatsapp" href="https://web.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+            <a class="instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <div class="copy-right">
+            <p>&copy creado por Oscar Lozano - 2023</p>
+        </div>
+    </footer>
+
+</body>
+</html>
