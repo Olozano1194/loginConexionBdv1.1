@@ -10,8 +10,9 @@ class UsuarioForm(forms.ModelForm):
             'lastname',
             'user',
             'email',
+            'roles',
             'password',
-            # 'repeatpassword',
+            
             
         ]
 
