@@ -7,5 +7,5 @@ from .models import RegistrarUsuario
 
 @admin.register(RegistrarUsuario)
 class RegisterUserAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'lastname', 'user', 'email', 'password')
-    list_editable = ('name', 'lastname', 'user', 'email', 'password')
+    list_display = ('id', 'name', 'lastname', 'user', 'email', 'roles', 'password')
+    list_editable = ('name', 'lastname', 'user', 'email', 'roles', 'password')

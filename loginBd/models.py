@@ -16,7 +16,16 @@ class RegistrarUsuario(models.Model):
 
     email = models.EmailField(unique=True)
 
+    OPCIONES_ROL = [
+        ('usuario', 'Usuario Normal'),
+        ('admin', 'Administrador')
+    ]
+
+    roles = models.CharField(max_length=7, choices=OPCIONES_ROL, default='usuario')
+
     password = models.CharField(max_length=300)
+
+    
 
 
     def __str__(self):
